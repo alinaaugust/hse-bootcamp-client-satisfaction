@@ -34,6 +34,7 @@ def open_data():
 
 def preprocess_data(df: pd.DataFrame, test=True):
     df.dropna(inplace=True)
+    df = df.drop(['Class'], axis=1)
 
     if test:
         X_df, y_df = split_data(df)
