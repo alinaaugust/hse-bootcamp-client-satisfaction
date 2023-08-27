@@ -18,7 +18,7 @@ DATASET_PATH = "https://raw.githubusercontent.com/evgpat/edu_stepik_from_idea_to
 
 
 def split_data(df: pd.DataFrame):
-    data = deepcopy(df.loc[df['satisfaction'].isin([0, 1])])
+    data = df.loc[df['satisfaction'].isin([0, 1])]
     X = data.drop(['satisfaction', 'id'], axis=1)
     y = data['satisfaction']
 
