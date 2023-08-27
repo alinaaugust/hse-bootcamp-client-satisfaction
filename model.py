@@ -53,7 +53,6 @@ def preprocess_data(df: pd.DataFrame, test=True):
     df['Flight Distance'].fillna(col_mean, inplace=True)
 
     df = df.dropna(axis='index', how='any', subset=['Gender', 'Customer Type', 'Type of Travel', 'Class'])
-    df.describe(include='object')
 
     df['Gender'] = df['Gender'].map({'Male' : 0, 'Female' : 1})
     df['Customer Type'] = df['Customer Type'].map({'disloyal Customer' : 0, 'Loyal Customer' : 1})
