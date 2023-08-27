@@ -73,7 +73,7 @@ def sidebar_input_features():
     customer_type = st.sidebar.radio("Лояльность клиента", ("Нет", "Да"))
     travel_type = st.sidebar.radio("Тип поездки", ("Деловая", "Личная"))
     #sclass = st.sidebar.selectbox("Класс обслуживания", (
-    "Бизнес", "Эконом плюс", "Эконом"))
+    "Бизнес", #"Эконом плюс", "Эконом"))
     dist = st.sidebar.number_input('Дальность перелета', 1, 10000)
     departure = st.sidebar.number_input('Задержка отправления', 0, 10000)
     arrival = st.sidebar.number_input('Дальность перелета', 0, 10000)
