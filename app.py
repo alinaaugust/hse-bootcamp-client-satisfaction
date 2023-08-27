@@ -137,7 +137,8 @@ def sidebar_input_features():
         "Gender": translation[sex],
         "Age": age,
         "Type of Travel": translation[travel_type],
-        "Class": translation[sclass],
+        #"Class": translation[sclass],
+        "Common Delay": departure + arrival,
         "Flight Distance": dist,
         "Departure Delay in Minutes": departure,
         "Arrival Delay in Minutes": arrival,
@@ -155,6 +156,7 @@ def sidebar_input_features():
         "Checkin service": checkin,
         "Inflight service": inflight,
         "Cleanliness": cleanliness,
+        "Marks sum": wifi + time_conv + booking + gate + food + boarding + seat + entertainment + onboard + leg + baggage + checkin + inflight + cleanliness,
     }
 
     df = pd.DataFrame(data, index=[0])
