@@ -137,7 +137,7 @@ def sidebar_input_features():
         "Gender": translation[sex],
         "Age": age,
         "Type of Travel": translation[travel_type],
-        #"Class": translation[sclass],
+        "Class": translation[sclass],
         "Common Delay": departure + arrival,
         "Flight Distance": dist,
         "Departure Delay in Minutes": departure,
