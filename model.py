@@ -10,7 +10,6 @@ Original file is located at
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from pickle import dump, load
-from copy import deepcopy
 import numpy as np
 import pandas as pd
 
