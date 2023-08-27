@@ -10,6 +10,7 @@ Original file is located at
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from pickle import dump, load
+from copy import deepcopy
 import numpy as np
 import pandas as pd
 
@@ -18,7 +19,7 @@ DATASET_PATH = "https://raw.githubusercontent.com/evgpat/edu_stepik_from_idea_to
 
 
 def split_data(df: pd.DataFrame):
-    data = df.loc[df['satisfaction'].isin([0, 1])]
+    data = deepcopy(df.loc[df['satisfaction'].isin([0, 1])])
     X = data.drop(['satisfaction', 'id'], axis=1)
     y = data['satisfaction']
 
